@@ -17,9 +17,9 @@ def getHtml(url):
     html.encoding='utf-8'
 
     xpHtml = etree.HTML(html.text)
-    print(xpHtml.xpath('//div[@class="rich_media_content "]//*/img'))
+
     imgurl = xpHtml.xpath('//div[@class="rich_media_content "]//*/img/@data-src')
-    print(imgurl[0]," aaa ",imgurl[1])
+
     result = ""
 
     title = xpHtml.xpath('//h1[@class="rich_media_title"]/text()')[0]
